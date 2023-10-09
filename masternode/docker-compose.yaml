@@ -74,8 +74,7 @@ x-airflow-common:
     AIRFLOW__CORE__FERNET_KEY: ${FERNET_KEY}
     AIRFLOW__WEBSERVER__SECRET_KEY: ${SECRET_KEY}
   extra_hosts:
-    - "richard-HP-Laptop-17-ubuntu22.04:192.168.0.159"
-    - "richard-mx:192.168.0.204"
+    - ${AIRFLOW_EXTRA_HOST}
   volumes:
     - ${AIRFLOW_PROJ_DIR:-.}/dags:/opt/airflow/dags
     - ${AIRFLOW_PROJ_DIR:-.}/logs:/opt/airflow/logs
