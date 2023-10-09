@@ -1,5 +1,0 @@
-HOSTNAME=richard-mx
-AIRFLOW_PROJ_DIR=/mnt/shared_doc/document/J2EE/airflow/clusterpoc/docker
-FERNET_KEY=jvYUbyxxxxxxxxxxxx=
-SECRET_KEY=aaabbbccc
-
