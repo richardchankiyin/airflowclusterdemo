@@ -38,7 +38,7 @@ from airflow.decorators import task
 from analyze import Analysis
 
 # [END import_module]
-
+output="/opt/airflow/taskout"
 
 # [START instantiate_dag]
 with DAG(
@@ -86,14 +86,15 @@ with DAG(
 
     # [END basic_task]
 
-    @task(task_id="print_nyicdx_summary")
+    @task(task_id="output_nyicdx_summary")
     def print_context(ds=None, **kwargs):
-        analyze=Analysis("/opt/airflow/taskout")
+        analyze=Analysis(output)
         nyicdx=analyze.readyahoo("NYICDX")
         lastentry=nyicdx.tail(1)
         time=lastentry.time.values[0]
         value=lastentry.close.values[0]
-        result=str(time) + str(value) 
+        result=str(time) + "," + str(value)
+        lastentry.to_csv(output + "/NYICDX_summary.csv") 
         return result
 
     t2 = print_context()
