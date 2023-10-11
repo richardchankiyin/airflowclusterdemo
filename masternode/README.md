@@ -3,7 +3,7 @@
 Steps to setup
 -------------
 1. Prepare env_var file and put this under the parent folder. For detail you can refer to env_var_example.txt 
-2. Init project dir, please run ./init_project_dir.sh and you will be able to see the following folders created
+2. Init project dir, please run **./init_project_dir.sh** and you will be able to see the following folders created
 ```
 richard@richard-linux:$ ls -l /mnt/airflow/cluster1/
 total 0
@@ -127,7 +127,7 @@ total 20
 
 Run the node
 --------
-Run the command 
+Run **./run.sh** command 
 ```
 ./run.sh 
 ```
@@ -153,7 +153,7 @@ Creating masternode_airflow-worker_1    ... done
 Creating masternode_airflow-triggerer_1 ... done
 ```
 
-Once the node is started we can run
+Once the node is started we can run **./healthcheck.sh**
 ```
 ./healthcheck.sh
 ```
@@ -188,7 +188,7 @@ There are two ways to trigger the run of dag, either from screen or command
 Screen
 ![Screenshot](screenshots/rundagfromscreen.png)
 
-Or command mode:
+Or command mode **./run_dag.sh <dag_id>**:
 ```
 ./run_dag.sh <dag_id>
 
@@ -211,7 +211,7 @@ richard@richard-linux:$ ./run_dag.sh dollar_index_summary
 }
 ```
 
-and we can check the status from command:
+and we can check the status from command **./check_run_dag.sh**:
 ```
 ./check_run_dag.sh <dag_id> <dag_run_id>
 
@@ -236,7 +236,7 @@ richard@richard-linux:$ ./check_run_dag.sh dollar_index_summary dollar_index_sum
 
 List Dags from command line
 ----------
-From home screen we can see dags displayed. At the same time we can run command to list dags:
+From home screen we can see dags displayed. At the same time we can run command **./list_dags.sh** to list dags:
 ```
 ./list_dags.sh
 
