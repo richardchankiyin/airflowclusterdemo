@@ -20,7 +20,7 @@ Sample Jobs
 Explanation of output
 ------------
 ```
-richard@richard-linux:$ ls -l /mnt//airflow/cluster1/taskout
+richard@richard-linux:$ ls -l /mnt/airflow/cluster1/taskout
 total 1788
 -rwxr-xr-x 1 root root 488025 Oct 11 12:40 DJI.csv
 -rwxr-xr-x 1 root root    222 Oct 11 12:40 DJI_summary.csv
