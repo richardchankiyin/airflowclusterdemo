@@ -176,3 +176,8 @@ login with username **airflow** and password **airflow**
 
 After successful login you should see home screen with DAGs 
 ![Screenshot](screenshots/airflowhome.png)
+
+Unpause Dags
+----------
+If you see DAG(s) is being paused, you can unpause through the screen
+![Screenshot](screenshots/unpausedags.png)
