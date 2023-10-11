@@ -6,7 +6,7 @@ Folder Structure
 - masternode: docker configuration to setup master node (including internal worker to take up jobs)
 - workernode: docker configuration to setup remote worker node
 
-Prerequsites
+Prerequisites
 ------------
 - docker ce engine
 - share drive that is with read and write access for master and worker nodes
