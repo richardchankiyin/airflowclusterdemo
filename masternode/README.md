@@ -186,5 +186,5 @@ Run Dags
 --------
 There are two ways to trigger the run of dag, either from screen or command
 Screen
-![Screenshot](screenshots/rundag.png)
+![Screenshot](screenshots/rundagfromscreen.png)
 
