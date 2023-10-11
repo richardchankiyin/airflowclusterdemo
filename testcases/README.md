@@ -1,9 +1,7 @@
-Test Cases
-----------
+#Test Cases
 In this document we want to verify the features to be available in this airflow cluster
 
-1. Trigger a DAG and different nodes collaborate to complete successfully
-=============
+##1. Trigger a DAG and different nodes collaborate to complete successfully
 1. trigger usindexsourcing and a new dag_run_id is being queued
 ```
 richard@richard-linux:$ ./run_dag.sh usindexsourcing
