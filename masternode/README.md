@@ -230,4 +230,6 @@ richard@richard-linux:$ ./check_run_dag.sh dollar_index_summary dollar_index_sum
   "note": null,
   "run_type": "manual",
   "start_date": "2023-10-11T07:35:21.233603+00:00",
+  "state": "success"
+}
 ```
