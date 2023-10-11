@@ -366,3 +366,11 @@ From home screen we can see dags displayed. At the same time we can run command 
 }
 
 ```
+
+Flower Screen
+----------
+There is a component called "Flower" to monitor the processing nodes. In our setting we have two internal master nodes dedicated on processing dags. Also another node from worker will be seen if it is online. Browse 
+```
+http://localhost:15555/workers
+```
+![Screenshot](screenshots/flowerhome.png)
