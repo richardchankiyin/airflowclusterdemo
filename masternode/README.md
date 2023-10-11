@@ -188,3 +188,46 @@ There are two ways to trigger the run of dag, either from screen or command
 Screen
 ![Screenshot](screenshots/rundagfromscreen.png)
 
+Or command mode:
+```
+./run_dag.sh <dag_id>
+
+richard@richard-linux:$ ./run_dag.sh dollar_index_summary
+{
+  "conf": {},
+  "dag_id": "dollar_index_summary",
+  "dag_run_id": "dollar_index_summary_2023101115351697009720",
+  "data_interval_end": "2023-10-11T07:35:21.150449+00:00",
+  "data_interval_start": "2023-10-10T07:35:21.150449+00:00",
+  "end_date": null,
+  "execution_date": "2023-10-11T07:35:21.150449+00:00",
+  "external_trigger": true,
+  "last_scheduling_decision": null,
+  "logical_date": "2023-10-11T07:35:21.150449+00:00",
+  "note": null,
+  "run_type": "manual",
+  "start_date": null,
+  "state": "queued"
+}
+```
+
+and we can check the status from command:
+```
+./check_run_dag.sh <dag_id> <dag_run_id>
+
+richard@richard-linux:$ ./check_run_dag.sh dollar_index_summary dollar_index_summary_2023101115351697009720
+{
+  "conf": {},
+  "dag_id": "dollar_index_summary",
+  "dag_run_id": "dollar_index_summary_2023101115351697009720",
+  "data_interval_end": "2023-10-11T07:35:21.150449+00:00",
+  "data_interval_start": "2023-10-10T07:35:21.150449+00:00",
+  "end_date": "2023-10-11T07:35:26.914152+00:00",
+  "execution_date": "2023-10-11T07:35:21.150449+00:00",
+  "external_trigger": true,
+  "last_scheduling_decision": "2023-10-11T07:35:26.911434+00:00",
+  "logical_date": "2023-10-11T07:35:21.150449+00:00",
+  "note": null,
+  "run_type": "manual",
+  "start_date": "2023-10-11T07:35:21.233603+00:00",
+```
