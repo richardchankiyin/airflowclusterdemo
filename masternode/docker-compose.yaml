@@ -73,6 +73,11 @@ x-airflow-common:
     _PIP_ADDITIONAL_REQUIREMENTS: ${_PIP_ADDITIONAL_REQUIREMENTS:-}
     AIRFLOW__CORE__FERNET_KEY: ${FERNET_KEY}
     AIRFLOW__WEBSERVER__SECRET_KEY: ${SECRET_KEY}
+    # support localhost base restapi
+    # ref: https://brilliantprogrammer.medium.com/how-to-trigger-airflow-dag-using-rest-api-dd40e3f7a30d
+    AIRFLOW__API__ACCESS_CONTROL_ALLOW_HEADERS: origin, content-type, accept
+    AIRFLOW__API__ACCESS_CONTROL_ALLOW_METHODS: POST, GET, OPTIONS, DELETE
+    AIRFLOW__API__ACCESS_CONTROL_ALLOW_ORIGINS: localhost
   extra_hosts:
     - ${AIRFLOW_EXTRA_HOST}
   volumes:

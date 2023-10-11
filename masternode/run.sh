@@ -1,1 +1,1 @@
-docker-compose --env-file env_var --profile flower up
+docker-compose --env-file env_var --profile flower up -d
