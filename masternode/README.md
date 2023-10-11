@@ -379,3 +379,7 @@ Master node only (master1 & master2 only)
 
 Master and Work nodes (master1, master2 and richard-mx)
 ![Screenshot](screenshots/flowerhomewithremoteworker.png)
+
+Tear down the node
+----------
+Run **docker compose down** to stop and tear down the node
