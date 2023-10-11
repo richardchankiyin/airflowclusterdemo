@@ -48,6 +48,14 @@ Date,Open,High,Low,Close,Adj Close,Volume
 ...
 ```
 NYICDX_summary.csv - summary file of NYICDX illustrating the current date information 
+```
 time,time,open,high,low,close,adjclose,volume,sma10,sma20,sma50
 2023-10-11 08:59:59,2023-10-11 08:59:59,105.752197,105.798798,105.658699,105.764198,105.764198,0,106.31342090000001,105.96321074999999,104.52588402
 ```
+DJI.csv - yahoo finance file of DJI
+DJI_summary.csv - summary file of DJI illustrating the current date information
+IXIC.csv - yahoo finance file of IXIC
+IXIC_summary.csv - summary file of IXIC illustrating the current date information
+SPX.csv - yahoo finance file of SPX
+SPX_summary.csv - summary file of SPX illustrating the current date information
+
