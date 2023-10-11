@@ -13,6 +13,9 @@ drwxr-xr-x 2 root root 0 Oct 10 21:31 logs
 drwxr-xr-x 2 root root 0 Oct 10 21:22 plugins
 drwxr-xr-x 2 root root 0 Oct 10 21:31 taskout
 ```
+dags - required dag files will be found
+taskout - output files from different jobs will be found
+
 3. Build docker images for master node and deploy dags. Images will be built and dags required files will be copied to <shared_drive>/dags
 ```
 Building airflow-init
