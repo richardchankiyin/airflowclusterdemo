@@ -37,3 +37,27 @@ $ ./build.sh
  => => writing image sha256:9a10cf73c8f02363b2ec07e5b1a845a7f2ae8eea13542015647f6a217ee192e6                                                                                                                   0.0s 
  => => naming to docker.io/apache/airflow:2.7.1                        
 ```
+
+Run the node
+--------
+Run **./run.sh** command 
+```
+./run.sh 
+```
+
+or 
+```
+docker compose --env-file env_var up -d
+```
+
+Remarks: Older docker version does not support "docker compose". If that is the case please use "docker-compose"
+
+The following could be seen:
+```
+$ ./run.sh 
+[+] Running 4/4
+ ✔ Container workernode-redis-1           Running                                                                                                                                                              0.0s 
+ ✔ Container workernode-postgres-1        Running                                                                                                                                                              0.0s 
+ ✔ Container workernode-airflow-init-1    Exited                                                                                                                                                               0.0s 
+ ✔ Container workernode-airflow-worker-1  Started   
+```
