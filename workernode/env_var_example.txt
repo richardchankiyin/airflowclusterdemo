@@ -1,0 +1,17 @@
+#Hostname of this workernode
+HOSTNAME=workernode
+# postgresdbhost (which is the same of master node ip) 
+POSTGRESDBHOST=192.168.0.246
+# postgresdbport (which is the port exposed thru docker)
+POSTGRESDBPORT=15432
+# redishost (which is the same of master node ip) 
+REDISHOST=192.168.0.246
+# redisport (which is the port exposed thru docker)
+REDISPORT=16379
+# shared drive between master and work nodes
+AIRFLOW_PROJ_DIR=/mnt/airflow/cluster1/
+# fernet_key to be the same of master node setting
+FERNET_KEY=jvYUbaaaaaabbbbbcccc
+# secret key to be the same of master node setting
+SECRET_KEY=aaabbbccc
+
