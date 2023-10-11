@@ -37,6 +37,7 @@ $ ./build.sh
  => => writing image sha256:9a10cf73c8f02363b2ec07e5b1a845a7f2ae8eea13542015647f6a217ee192e6                                                                                                                   0.0s 
  => => naming to docker.io/apache/airflow:2.7.1                        
 ```
+Remarks: requirements.txt is for job processing application python dependency setup. If you need to have more dependencies required in your dag files you need to include more dependency
 
 Run the node
 --------

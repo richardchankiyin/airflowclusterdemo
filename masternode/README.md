@@ -125,6 +125,8 @@ total 20
 -rwxr-xr-x 1 root root 2387 Oct 11 13:45 yahoo_finance_data.sh
 ```
 
+Remarks: requirements.txt is for job processing application python dependency setup. If you need to have more dependencies required in your dag files you need to include more dependency
+
 Run the node
 --------
 Run **./run.sh** command 
