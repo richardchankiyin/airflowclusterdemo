@@ -80,3 +80,57 @@ $ docker compose down
 ```
 
 ![Screenshot](screenshots/test2_2.png)
+
+3. Run dag and it is expected to be seen as **queued**
+Result:
+```
+richard@richard-linux-mint:~/airflowclusterdemo/masternode$ ./run_dag.sh dollar_index_summary
+{
+  "conf": {},
+  "dag_id": "dollar_index_summary",
+  "dag_run_id": "dollar_index_summary_2023101121181697030304",
+  "data_interval_end": "2023-10-11T13:18:25.042748+00:00",
+  "data_interval_start": "2023-10-10T13:18:25.042748+00:00",
+  "end_date": null,
+  "execution_date": "2023-10-11T13:18:25.042748+00:00",
+  "external_trigger": true,
+  "last_scheduling_decision": null,
+  "logical_date": "2023-10-11T13:18:25.042748+00:00",
+  "note": null,
+  "run_type": "manual",
+  "start_date": null,
+  "state": "queued"
+}
+```
+
+4. Wait for 15 sec and Run check_run_dag and it is expected to be seen as **success**
+Result:
+```
+richard@richard-linux:$ ./check_run_dag.sh dollar_index_summary dollar_index_summary_2023101121181697030304
+{
+  "conf": {},
+  "dag_id": "dollar_index_summary",
+  "dag_run_id": "dollar_index_summary_2023101121181697030304",
+  "data_interval_end": "2023-10-11T13:18:25.042748+00:00",
+  "data_interval_start": "2023-10-10T13:18:25.042748+00:00",
+  "end_date": "2023-10-11T13:18:30.118609+00:00",
+  "execution_date": "2023-10-11T13:18:25.042748+00:00",
+  "external_trigger": true,
+  "last_scheduling_decision": "2023-10-11T13:18:30.114721+00:00",
+  "logical_date": "2023-10-11T13:18:25.042748+00:00",
+  "note": null,
+  "run_type": "manual",
+  "start_date": "2023-10-11T13:18:26.079042+00:00",
+  "state": "success"
+}
+```
+
+5. Check individual task and all of them are not expected to be done by **richard-mx**
+Result:
+Task **yahoo_curl_nyicdx** done by **master1**
+
+![Screenshot](screenshots/test2_3.png)
+
+Task **output_nyicdx_summary** done by **master1**
+
+![Screenshot](screenshots/test2_4.png)
