@@ -124,3 +124,41 @@ total 20
 -rwxr-xr-x 1 root root 4819 Oct 11 13:45 usindexsummary.py
 -rwxr-xr-x 1 root root 2387 Oct 11 13:45 yahoo_finance_data.sh
 ```
+
+Run the node
+--------
+Run the command 
+```
+./run.sh 
+```
+
+or 
+```
+docker compose --env-file env_var --profile flower up -d
+```
+
+Remarks: Older docker version does not support "docker compose". If that is the case please use "docker-compose"
+
+The following will be seen:
+```
+Creating network "masternode_default" with the default driver
+Creating masternode_redis_1    ... done
+Creating masternode_postgres_1 ... done
+Creating masternode_airflow-init_1 ... done
+Creating masternode_flower_1            ... done
+Creating masternode_airflow-worker2_1   ... done
+Creating masternode_airflow-webserver_1 ... done
+Creating masternode_airflow-scheduler_1 ... done
+Creating masternode_airflow-worker_1    ... done
+Creating masternode_airflow-triggerer_1 ... done
+```
+
+Once the node is started we can run
+```
+./healthcheck.sh
+```
+
+and see
+```
+{"dag_processor": {"latest_dag_processor_heartbeat": null, "status": null}, "metadatabase": {"status": "healthy"}, "scheduler": {"latest_scheduler_heartbeat": "2023-10-11T06:33:05.042532+00:00", "status": "healthy"}, "triggerer": {"latest_triggerer_heartbeat": "2023-10-11T06:33:06.029908+00:00", "status": "healthy"}}
+```
