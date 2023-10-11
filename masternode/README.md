@@ -380,6 +380,15 @@ Master node only (master1 & master2 only)
 Master and Work nodes (master1, master2 and richard-mx)
 ![Screenshot](screenshots/flowerhomewithremoteworker.png)
 
+DAG validation
+----------
+Airflow is able to:
+- detect cyclic dependency
+- validate parameter
+
+If there is anything wrong with the dag (or dag file), those dags will not be available in the airflow
+
+
 Tear down the node
 ----------
 Run **docker compose down** to stop and tear down the node
