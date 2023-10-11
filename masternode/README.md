@@ -170,6 +170,6 @@ Browse
 http://localhost:18080/login/
 ```
 and you will see:
-![Screenshot](screenshots/login_screen.png)
+![Screenshot](screenshots/loginscreen.png)
 
 login with username **airflow** and password **airflow**
