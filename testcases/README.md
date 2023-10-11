@@ -79,4 +79,4 @@ $ docker compose down
  ✔ Network workernode_default             Removed 
 ```
 
-![Screenshot](screenshots/test2_1.png)
+![Screenshot](screenshots/test2_2.png)
