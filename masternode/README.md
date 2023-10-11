@@ -233,3 +233,136 @@ richard@richard-linux:$ ./check_run_dag.sh dollar_index_summary dollar_index_sum
   "state": "success"
 }
 ```
+
+List Dags from command line
+----------
+From home screen we can see dags displayed. At the same time we can run command to list dags:
+```
+./list_dags.sh
+
+{
+  "dags": [
+    {
+      "dag_id": "dollar_index_summary",
+      "default_view": "grid",
+      "description": "Dollar Index Summary DAG",
+      "file_token": "Ii9vcHQvYWlyZmxvdy9kYWdzL2RvbGxhcmluZGV4c3VtbWFyeS5weSI.6xLWRjMkgNZK3Tdr9_ZKjx5xCC4",
+      "fileloc": "/opt/airflow/dags/dollarindexsummary.py",
+      "has_import_errors": false,
+      "has_task_concurrency_limits": false,
+      "is_active": true,
+      "is_paused": false,
+      "is_subdag": false,
+      "last_expired": null,
+      "last_parsed_time": "2023-10-11T07:53:23.122500+00:00",
+      "last_pickled": null,
+      "max_active_runs": 16,
+      "max_active_tasks": 16,
+      "next_dagrun": "2023-10-11T01:03:54.348157+00:00",
+      "next_dagrun_create_after": "2023-10-12T01:03:54.348157+00:00",
+      "next_dagrun_data_interval_end": "2023-10-12T01:03:54.348157+00:00",
+      "next_dagrun_data_interval_start": "2023-10-11T01:03:54.348157+00:00",
+      "owners": [
+        "airflow"
+      ],
+      "pickle_id": null,
+      "root_dag_id": null,
+      "schedule_interval": {
+        "__type": "TimeDelta",
+        "days": 1,
+        "microseconds": 0,
+        "seconds": 0
+      },
+      "scheduler_lock": null,
+      "tags": [
+        {
+          "name": "dollarindex"
+        }
+      ],
+      "timetable_description": ""
+    },
+    {
+      "dag_id": "usindexconsuming",
+      "default_view": "grid",
+      "description": null,
+      "file_token": "Ii9vcHQvYWlyZmxvdy9kYWdzL3VzaW5kZXhzdW1tYXJ5LnB5Ig.F3PsFF3KgdrT4K0tUjmolZ69iPM",
+      "fileloc": "/opt/airflow/dags/usindexsummary.py",
+      "has_import_errors": false,
+      "has_task_concurrency_limits": false,
+      "is_active": true,
+      "is_paused": false,
+      "is_subdag": false,
+      "last_expired": null,
+      "last_parsed_time": "2023-10-11T07:53:23.135369+00:00",
+      "last_pickled": null,
+      "max_active_runs": 16,
+      "max_active_tasks": 16,
+      "next_dagrun": null,
+      "next_dagrun_create_after": null,
+      "next_dagrun_data_interval_end": null,
+      "next_dagrun_data_interval_start": null,
+      "owners": [
+        "airflow"
+      ],
+      "pickle_id": null,
+      "root_dag_id": null,
+      "schedule_interval": {
+        "__type": "CronExpression",
+        "value": "Dataset"
+      },
+      "scheduler_lock": null,
+      "tags": [
+        {
+          "name": "usindex"
+        },
+        {
+          "name": "consumes"
+        }
+      ],
+      "timetable_description": "Triggered by datasets"
+    },
+    {
+      "dag_id": "usindexsourcing",
+      "default_view": "grid",
+      "description": null,
+      "file_token": "Ii9vcHQvYWlyZmxvdy9kYWdzL3VzaW5kZXhzdW1tYXJ5LnB5Ig.F3PsFF3KgdrT4K0tUjmolZ69iPM",
+      "fileloc": "/opt/airflow/dags/usindexsummary.py",
+      "has_import_errors": false,
+      "has_task_concurrency_limits": false,
+      "is_active": true,
+      "is_paused": false,
+      "is_subdag": false,
+      "last_expired": null,
+      "last_parsed_time": "2023-10-11T07:53:23.139857+00:00",
+      "last_pickled": null,
+      "max_active_runs": 16,
+      "max_active_tasks": 16,
+      "next_dagrun": "2023-10-11T00:00:00+00:00",
+      "next_dagrun_create_after": "2023-10-12T00:00:00+00:00",
+      "next_dagrun_data_interval_end": "2023-10-12T00:00:00+00:00",
+      "next_dagrun_data_interval_start": "2023-10-11T00:00:00+00:00",
+      "owners": [
+        "airflow"
+      ],
+      "pickle_id": null,
+      "root_dag_id": null,
+      "schedule_interval": {
+        "__type": "CronExpression",
+        "value": "@daily"
+      },
+      "scheduler_lock": null,
+      "tags": [
+        {
+          "name": "produces"
+        },
+        {
+          "name": "usindex"
+        }
+      ],
+      "timetable_description": "At 00:00"
+    }
+  ],
+  "total_entries": 3
+}
+
+```
