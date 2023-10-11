@@ -3,7 +3,7 @@
 Steps to setup
 -------------
 1. Prepare env_var file and put this under the parent folder. For detail you can refer to env_var_example.txt 
-2. run **./build.sh** command to build
+2. run **./build.sh** command to build. This will build the docker image including the deployment of dag files (copying from shared drive to docker internal drive)
 ```
 richard@richard-mx:
 $ ./build.sh 
