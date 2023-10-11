@@ -61,3 +61,8 @@ $ ./run.sh
  ✔ Container workernode-airflow-init-1    Exited                                                                                                                                                               0.0s 
  ✔ Container workernode-airflow-worker-1  Started   
 ```
+
+Tear down the node
+----------
+Run **docker compose down** to stop and tear down the node
+
