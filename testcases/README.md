@@ -45,7 +45,7 @@ richard@richard-linux-mint:~/airflowclusterdemo/masternode$ ./check_run_dag.sh u
 }
 
 ```
-There are different tasks and master1, master2 and richard-mx nodes to be seen in the log
+There are different tasks and **master1**, **master2** and **richard-mx** nodes to be seen in the log
 
 Task **yahoo_curl_ixic** by **richard-mx**
 ![Screenshot](screenshots/test1_1.png)
