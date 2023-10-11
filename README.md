@@ -59,3 +59,12 @@ IXIC_summary.csv - summary file of IXIC illustrating the current date informatio
 SPX.csv - yahoo finance file of SPX  
 SPX_summary.csv - summary file of SPX illustrating the current date information  
 
+usindexsourcing.txt - file generated once usindexsourcing job completed with date run. Airflow will be able to detect the update of this file to trigger usindexconsuming job      
+usindexconsuming.txt - file generated once usindexconsuming job completed with date run
+```
+richard@richard-linux:$ cat /mnt/airflow/cluster1/taskout/usindexsourcing.txt 
+20231011
+richard@richard-linux:$ cat /mnt/airflow/cluster1/taskout/usindexconsuming.txt 
+20231011
+
+```
