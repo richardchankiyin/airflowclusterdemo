@@ -391,6 +391,10 @@ Airflow is able to:
 If there is anything wrong with the dag (or dag file), those dags will not be available in the airflow
 
 
+Job Rerun/Scheduling/Retry
+----------------
+Airflow supports job rerun, run by schedule and retry after failing. That could be done through dag definition
+
 Tear down the node
 ----------
 Run **docker compose down** to stop and tear down the node
