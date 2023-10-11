@@ -171,3 +171,5 @@ http://localhost:18080/login/
 ```
 and you will see:
 ![Screenshot](screenshots/login_screen.png)
+
+login with username **airflow** and password **airflow**
