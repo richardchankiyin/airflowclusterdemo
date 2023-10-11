@@ -373,4 +373,9 @@ There is a component called "Flower" to monitor the processing nodes. In our set
 ```
 http://localhost:15555/workers
 ```
+
+Master node only
 ![Screenshot](screenshots/flowerhome.png)
+
+Master and Work nodes
+![Screenshot](screenshots/flowerhomewithremoteworker.png)
