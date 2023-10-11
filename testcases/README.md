@@ -58,3 +58,11 @@ Task **yahoo_curl_spx** by **master1**
 
 Task **print_date** by **master2**
 ![Screenshot](screenshots/test1_4.png)
+
+
+## 2. Tear down worker node and Trigger a DAG and only master node to complete successfully
+1. Before tear down there are **master1**, **master2** and **richard-mx** nodes available in the flower screen.
+Result
+
+
+![Screenshot](screenshots/test2_1.png)
