@@ -1,0 +1,10 @@
+# AIRFLOW_PROJ_DIR is the shared drive directory of master and worker nodes
+AIRFLOW_PROJ_DIR=/mnt/airflow/cluster1/
+# fernet key this should be the same for all master and worker node
+FERNET_KEY=xxxxxxxxx
+# secret key should be the same for all master and worker node
+SECRET_KEY=bbbbbbbbbb
+# airflow extra host is about the host of worker node. If you need
+# multiple worker node you have to mention multiple variables
+# please refer to docker-compose.yaml airflow-common/extra-hosts:
+#AIRFLOW_EXTRA_HOST=workernode:ip
