@@ -5,6 +5,7 @@ Folder Structure
 ---------
 - masternode: docker configuration to setup master node (including internal worker to take up jobs)
 - workernode: docker configuration to setup remote worker node
+- testcases: illustrate the tests were done when setting up the cluster 
 
 Prerequisites
 ------------
