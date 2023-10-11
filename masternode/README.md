@@ -181,3 +181,10 @@ Unpause Dags
 ----------
 If you see DAG(s) is being paused, you can unpause through the screen
 ![Screenshot](screenshots/unpausedags.png)
+
+Run Dags
+--------
+There are two ways to trigger the run of dag, either from screen or command
+Screen
+![Screenshot](screenshots/rundag.png)
+
