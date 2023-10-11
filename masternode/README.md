@@ -162,3 +162,12 @@ and see
 ```
 {"dag_processor": {"latest_dag_processor_heartbeat": null, "status": null}, "metadatabase": {"status": "healthy"}, "scheduler": {"latest_scheduler_heartbeat": "2023-10-11T06:33:05.042532+00:00", "status": "healthy"}, "triggerer": {"latest_triggerer_heartbeat": "2023-10-11T06:33:06.029908+00:00", "status": "healthy"}}
 ```
+
+Login webserver
+----------
+Browse 
+```
+http://localhost:18080/login/
+``
+and you will see:
+![Screenshot](screenshots/login_screen.png)
