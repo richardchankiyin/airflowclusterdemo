@@ -61,13 +61,13 @@ Task **print_date** by **master2**
 
 
 ## 2. Tear down worker node and Trigger a DAG and only master node to complete successfully
-1. Before tear down there are **master1**, **master2** and **richard-mx** nodes available (status: **online**) in the flower screen.
+1. Before tear down there are **master1**, **master2** and **richard-mx** nodes available (status: **online**) in the flower screen.  
 Result:
 
 ![Screenshot](screenshots/test2_1.png)
 
 
-2. Tear down worker node and see it **offline** in the flower screen
+2. Tear down worker node and see it **offline** in the flower screen  
 Result:
 ```
 $ docker compose down
@@ -81,7 +81,7 @@ $ docker compose down
 
 ![Screenshot](screenshots/test2_2.png)
 
-3. Run dag and it is expected to be seen as **queued**
+3. Run dag and it is expected to be seen as **queued**  
 Result:
 ```
 richard@richard-linux-mint:~/airflowclusterdemo/masternode$ ./run_dag.sh dollar_index_summary
@@ -103,7 +103,7 @@ richard@richard-linux-mint:~/airflowclusterdemo/masternode$ ./run_dag.sh dollar_
 }
 ```
 
-4. Wait for 15 sec and Run check_run_dag and it is expected to be seen as **success**
+4. Wait for 15 sec and Run check_run_dag and it is expected to be seen as **success**  
 Result:
 ```
 richard@richard-linux:$ ./check_run_dag.sh dollar_index_summary dollar_index_summary_2023101121181697030304
@@ -125,7 +125,7 @@ richard@richard-linux:$ ./check_run_dag.sh dollar_index_summary dollar_index_sum
 }
 ```
 
-5. Check individual task and all of them are not expected to be done by **richard-mx**
+5. Check individual task and all of them are not expected to be done by **richard-mx**  
 Result:
 Task **yahoo_curl_nyicdx** done by **master1**
 
