@@ -61,8 +61,22 @@ Task **print_date** by **master2**
 
 
 ## 2. Tear down worker node and Trigger a DAG and only master node to complete successfully
-1. Before tear down there are **master1**, **master2** and **richard-mx** nodes available in the flower screen.
-Result
+1. Before tear down there are **master1**, **master2** and **richard-mx** nodes available (status: **online**) in the flower screen.
+Result:
 
+![Screenshot](screenshots/test2_1.png)
+
+
+2. Tear down worker node and see it **offline** in the flower screen
+Result:
+```
+$ docker compose down
+[+] Running 5/5
+ ✔ Container workernode-postgres-1        Removed                                                                                                                                                              2.6s 
+ ✔ Container workernode-redis-1           Removed                                                                                                                                                              1.6s 
+ ✔ Container workernode-airflow-worker-1  Removed                                                                                                                                                              3.6s 
+ ✔ Container workernode-airflow-init-1    Removed                                                                                                                                                              0.0s 
+ ✔ Network workernode_default             Removed 
+```
 
 ![Screenshot](screenshots/test2_1.png)
