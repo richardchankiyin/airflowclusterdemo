@@ -173,3 +173,6 @@ and you will see:
 ![Screenshot](screenshots/loginscreen.png)
 
 login with username **airflow** and password **airflow**
+
+After successful login you should see home screen with DAGs 
+![Screenshot](screenshots/airflowhomescreen.png)
