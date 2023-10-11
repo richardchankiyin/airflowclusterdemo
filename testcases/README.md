@@ -2,7 +2,8 @@
 In this document we want to verify the features to be available in this airflow cluster
 
 ## 1. Trigger a DAG and different nodes collaborate to complete successfully
-1. trigger usindexsourcing and a new dag_run_id is being queued
+1. trigger usindexsourcing and a new dag_run_id is expected to be queued
+Result:
 ```
 richard@richard-linux:$ ./run_dag.sh usindexsourcing
 {
@@ -22,7 +23,8 @@ richard@richard-linux:$ ./run_dag.sh usindexsourcing
   "state": "queued"
 }
 ``` 
-2. Wait for 15 seconds and check the status of dag_run_id. This should be "success"
+2. Wait for 15 seconds and check the status of dag_run_id. The status is expected to be **success**
+Result:
 ```
 richard@richard-linux-mint:~/airflowclusterdemo/masternode$ ./check_run_dag.sh usindexsourcing usindexsourcing_2023101120401697028026
 {
@@ -43,8 +45,8 @@ richard@richard-linux-mint:~/airflowclusterdemo/masternode$ ./check_run_dag.sh u
 }
 
 ```
-There are different tasks and **master1**, **master2** and **richard-mx** nodes to be seen in the log
-
+3. There are different tasks and **master1**, **master2** and **richard-mx** nodes to be seen in the log
+Result:
 Task **yahoo_curl_ixic** by **richard-mx**
 ![Screenshot](screenshots/test1_1.png)
 
